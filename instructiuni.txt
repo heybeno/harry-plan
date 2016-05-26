@@ -1,0 +1,59 @@
+# Pentru Harry:
+
+In Ubuntu, apasa <CTRL> + <ALT> + <T>   => se deschide terminal
+
+In terminal:
+
+#[1] Mergi unde vrei sa salvezi fisierele (se va face un director separat). De scrie in terminal (apoi apasa enter):
+
+cd ~
+
+#[2] Instaleaza git (daca nu il ai prezent). Scrie in terminal:
+
+sudo apt-get install git
+
+#[3] Downloadeaza fisierele:
+git clone https://github.com/heybeno/harry-plan.git
+
+#[4] Vezi fisierele si directorul unde le ai
+                    ('cd' : schimba directorul in terminal)
+                    ('ll' : iti afiseaza ce fisiere ai    )
+                    ('pwd': iti afiseaza in director esti. Foloseste directorul asta pentru cand deschizi documentul )
+cd harry-plan
+ll
+pwd
+
+
+
+-------------------------------------------------
+Daca faci modificari, pune versiunea noua pe server:
+----------------------------------------------------
+
+[4] Vezi daca ai modificari:
+#  trebuie sa fii in directorul unde ai descarcat fisierele:
+cd ~/harry-plan
+
+#Scrie la terminal
+git status
+
+# Daca nu ai nici-o modificare, iti va apare mesaj:
+#
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+# nothing to commit, working directory clean
+
+# Daca ai modificari, iti va apare un mesaj de genul:
+#Your branch is up-to-date with 'origin/master'.
+#Changes not staged for commit:
+#  (use "git add <file>..." to update what will be committed)
+#  (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   Plan_recap.odt
+
+[5] Submite versiunea revizuita a fisierelor
+
+# Ai grija sa fii in directorul unde ai fisierul si scrie
+
+git commit -a -m "pentru harry de revizuit"
+git push
+
